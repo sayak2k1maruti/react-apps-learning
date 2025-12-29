@@ -1,0 +1,82 @@
+
+.steps{
+  padding: 1rem 2rem;
+  display: flex;
+  width: 90vw;
+  max-width: 50rem;
+  background: #ddd;
+  margin : 5rem auto;
+  flex-direction: column;
+  align-content: space-between;
+  border-radius: 5px;
+  box-shadow: #ababab 10px 10px 10px;
+  --accent-color : rgb(124, 23, 248);
+}
+.navs{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+
+.navs li{
+  background: #fff;
+  --box-radius : 3rem;
+  height: var(--box-radius);
+  width: var(--box-radius);
+  text-align: center;
+  line-height: var(--box-radius);
+  border-radius: 1000px;
+  background-color: #aaa;
+  color : #222;
+  font-weight: bold;
+}
+.navs li:hover{
+  cursor: pointer;
+  background-color: rgb(200, 200, 200);
+  transition: background-color 0.3s ease-in-out;
+}
+.navs li.selected{
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.steps p{
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  padding : 0rem 4rem;
+}
+.btn{
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover{
+  background-color: rgb(54, 7, 124);
+  transition: background-color 0.3s ease-in-out;
+}
+.btn:disabled{
+  background-color: #888;
+  cursor: not-allowed;
+}
+.toggle-btn {
+    background-color: red;
+    margin-left: calc(100vw - 10rem);
+    right: 0;
+    margin-top: 2rem;
+}
+.toggle-btn:hover{
+  background-color: rgb(173, 2, 2);
+}
