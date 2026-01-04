@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+
+html,*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.app{
+    font-family: "Quicksand";
+    --color-primary : rgb(80, 38, 8);
+    --color--accent: rgb(84, 201, 239);
+}
+.header{
+    background-color: orange;
+    width: 100vw;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.header h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family: "Monoton";
+}
+.entry-form{
+    background-color: rgb(227, 120, 21);
+    color : #111;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem 0;
+    gap : 1rem;
+    align-items: center;
+    font-size: 1rem;
+    width: 100vw;
+}
+.entry-form h2{
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+.entry-form input{
+    border-radius: 50px;
+    background-color: rgb(244, 215, 161);
+    padding: .7rem 1rem;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.entry-form button{
+    border-radius: 50px;
+    background-color: var(--color--accent);
+    padding: .7rem 1rem;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.check-list{
+    --padding : 1rem;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: var(--padding);
+    background: var(--color-primary);
+    color: #eee;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 20rem);
+}
+.check-item{
+    display: flex;
+    border: #aaa 1px solid;
+    border-radius: 10px;
+    padding: .5rem;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    position: relative; 
+    min-width: 20rem;
+
+}
+.check-item input{
+    width: 2rem;
+    height: 2rem;
+}
+.check-item p{
+    font-size: 1.5rem;
+}
+.check-item button{
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+}
+.days-remaining{
+    position: absolute;
+    bottom: -0.5rem;
+    font-size: 0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    padding : 0 0.5rem;
+    color: rgb(230, 25, 141);
+}
+.completed{
+    color : green
+}
+.overdue{
+    color: red;
+}
+.completed_check_list{
+    border: green 1px solid;
+    color: green;
+}
+.overdue_check_list{
+    border: red 1px solid;
+    color: red;
+}
+.completed_check_list p{
+    text-decoration: line-through;
+}
+
+.footer{
+    background-color: var(--color--accent);
+    color:var(--color-primary);
+    padding: 1rem;
+    text-align: center;
+    width: 100vw;
+}
