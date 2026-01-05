@@ -59,6 +59,34 @@ html,*{
     text-transform: uppercase;
     font-weight: 500;
 }
+
+.check-list-container{
+    width: 100vw;
+    height: calc(100vh - 16.8rem);
+    background: var(--color-primary);
+    overflow: scroll;
+
+}
+.check-list-controller{  
+    position: absolute;  
+    bottom: 4.5rem;
+    width: 100vw;
+    display: flex;
+    gap : 1rem;
+    justify-content: center;
+}
+.check-list-controller button,select{
+    color: #acacac;
+    border-radius: 50px;
+    font-size: 1rem;
+    width: fit-content;
+    padding: .2rem 1rem;
+    text-align: center;
+    border : none;
+    background: #8888;
+    backdrop-filter: 100;
+    cursor: pointer;
+}
 .check-list{
     --padding : 1rem;
     width: 100vw;
@@ -68,10 +96,9 @@ html,*{
     justify-content: center;
     gap: 2rem;
     padding: var(--padding);
-    background: var(--color-primary);
     color: #eee;
     flex-wrap: wrap;
-    min-height: calc(100vh - 20rem);
+    background: var(--color-primary);
 }
 .check-item{
     display: flex;
@@ -90,6 +117,7 @@ html,*{
 .check-item input{
     width: 2rem;
     height: 2rem;
+    cursor: pointer;
 }
 .check-item p{
     font-size: 1.5rem;
