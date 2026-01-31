@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Event Propagation</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+                padding: 20px;
+            }
+
+            #parent {
+                background-color: #e8f4f9;
+                border: 2px solid #3498db;
+                padding: 20px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+
+            #child {
+                background-color: #fef5e7;
+                border: 2px solid #f39c12;
+                padding: 15px;
+                margin-top: 15px;
+                border-radius: 5px;
+            }
+
+            #child-child {
+                background-color: #fdeaea;
+                border: 2px solid #e74c3c;
+                padding: 15px;
+                margin-top: 15px;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: #27ae60;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 14px;
+                margin: 5px 0;
+            }
+
+            button:hover {
+                background-color: #229954;
+            }
+
+            button:active {
+                opacity: 0.8;
+            }
+
+            p {
+                background-color: white;
+                border: 1px solid #bdc3c7;
+                padding: 15px;
+                border-radius: 5px;
+                line-height: 1.6;
+                color: #333;
+            }
+        </style>
+    </head>
+    <body onclick="handleButtonClick(event)">
+        <div id="parent">
+            <div id="child">
+                <button onclick="anotherFunction(event)" id="button">
+                    Click Me
+                </button>
+                <div id="child-child">
+                    <button id="button2" onclick="yetAnotherFunction(event)">
+                        Click Me
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p id="text"></p>
+        </div>
+    </body>
+    <script>
+        function handleButtonClick(event) {
+            const text = document.getElementById("text");
+            if (event.target.id === "button") {
+                text.textContent = "Button Clicked";
+            } else if (event.target.id === "button2") {
+                text.textContent = "Button 2 Clicked";
+            } else {
+                text.textContent = `${event.target.id} Clicked`;
+            }
+        }
+        function anotherFunction(event) {
+            console.log("Another function called");
+            event.stopPropagation();
+        }
+        function yetAnotherFunction(event) {
+            console.log("Yet another function called");
+            // event.stopPropagation();
+        }
+    </script>
+</html>
