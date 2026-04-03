@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f8f9fa;
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 2rem 0;
+    border-bottom: 2px solid #e0e0e0;
+}
+.tabs li {
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px 4px 0 0;
+    background-color: transparent;
+    color: #666;
+    cursor: pointer;
+    flex: 0 1 auto;
+    list-style: none;
+    text-align: center;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.tabs li:hover {
+    color: #1976d2;
+    border-bottom-color: #1976d2;
+}
+
+.tabs li.active {
+    color: #1976d2;
+    border-bottom-color: #1976d2;
+}
+
+.article {
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: auto;
+    flex: 0 1 100%;
+    list-style: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.article h1 {
+    margin: 0 0 1rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.article p {
+    margin: 0.75rem 0;
+    font-size: 0.95rem;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #555;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.like-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    align-self: flex-end;
+}
+
+.like-container button {
+    background-color: #ffebee;
+    border: 2px solid #e91e63;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.like-container button:hover {
+    background-color: #f8bbd0;
+    transform: scale(1.1);
+}
+
+.like-container button:active {
+    transform: scale(0.95);
+}
+
+.like-count {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e91e63;
+    min-width: 2rem;
+}
