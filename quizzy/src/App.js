@@ -6,7 +6,7 @@ import Starter from "./components/Starter";
 import Question from "./components/Question";
 import Result from "./components/Result";
 
-const TIME_PER_QUESTION = 1;
+const TIME_PER_QUESTION = 10;
 
 const initialState = {
   questions: [],
